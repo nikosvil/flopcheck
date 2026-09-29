@@ -1,3 +1,5 @@
+> **Note (added for this repository).** This folder holds only the six `mfu_aggregated_per_config_*.csv` files from [dos-group/gpu_power_benchmark](https://github.com/dos-group/gpu_power_benchmark) (MIT, © Niklas Enskat, Philipp Wiesner, Odej Kao), at the commit recorded in `SOURCE_COMMIT.txt`. The scripts described below are in the original repository, not here. `analysis/reanalysis_dos_group.py` reads these CSVs. The text below is the original README, unchanged.
+
 # GPU Power Benchmark
 
 A framework for benchmarking GPU power draw, GPU Utilization, and Model FLOPs Utilization (MFU) across different hardware and training configurations.
