@@ -93,7 +93,7 @@ class Accelerator:
     def candidate_peaks(self) -> dict[str, float]:
         """Every value a good-faith reader could take as "the" peak.
 
-        This is the raw material for Finding 2: the set of numbers that
+        This is the raw material for paper §4.2: the set of numbers that
         Annex A.2.1's undefined term admits.
         """
         out: dict[str, float] = {}

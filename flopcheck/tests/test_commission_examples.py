@@ -49,7 +49,7 @@ def test_hardware_examples_fail_without_the_50_percent_assumption(label):
 
 
 def test_h100_candidate_peaks_span_a_factor_of_eight():
-    """Finding 2: 'peak theoretical performance' admits an 8x range."""
+    """Paper §4.2: 'peak theoretical performance' admits an 8x range."""
     h100 = peaks.get("H100")
     # 8.0004, not exactly 8: NVIDIA's own datasheet rounds 494.7 / 989.4 /
     # 1978.9 inconsistently. The inconsistency is real and worth reporting.
@@ -68,7 +68,7 @@ def test_commission_used_dense_bf16_without_saying_so():
 
 
 def test_one_significant_figure_consumes_a_large_share_of_the_margin():
-    """Finding 4: the Form's rounding alone eats up to 40% of the budget."""
+    """Paper §6.1: the Form's rounding alone eats up to 40% of the budget."""
     lo, hi = estimate.significant_figure_interval(4e5, sigfigs=1)
     assert (lo, hi) == pytest.approx((3.5e5, 4.5e5))
 
@@ -80,7 +80,7 @@ def test_one_significant_figure_consumes_a_large_share_of_the_margin():
 
 
 def test_utilisation_ambiguity_can_decide_threshold_classification():
-    """Finding 1: one undefined word moves a model across Article 51(2).
+    """Paper §4.1: one undefined word moves a model across Article 51(2).
 
     6 000 H100s for 30 days -- all of it public, undisputed fact. At this
     scale the entire plausible occupancy band sits above the Article 51(2)

@@ -290,7 +290,7 @@ def fraction_of_margin(relative_error: float, margin: float = MARGIN) -> float:
 
 
 # ---------------------------------------------------------------------------
-# Finding 1 -- what "utilisation" can mean
+# Paper §4.1 -- what "utilisation" can mean
 # ---------------------------------------------------------------------------
 
 UTILISATION_METRICS: dict[str, tuple[float, float, str]] = {
@@ -330,7 +330,7 @@ def utilisation_spread(
 ) -> dict[str, tuple[float, float]]:
     """Reported compute under each candidate reading of ``U``.
 
-    This is Finding 1 in arithmetic form: one run, one set of undisputed
+    This is paper §4.1 in arithmetic form: one run, one set of undisputed
     public facts, and a range of lawful answers.
     """
     metrics = metrics or UTILISATION_METRICS
@@ -348,7 +348,7 @@ def peak_spread(
 ) -> dict[str, float]:
     """Reported compute under each candidate reading of ``P``.
 
-    This is Finding 2 in arithmetic form.
+    This is paper §4.2 in arithmetic form.
     """
     acc = peaks.get(accelerator)
     return {

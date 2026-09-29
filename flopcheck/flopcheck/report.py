@@ -112,7 +112,7 @@ def figure_1_data(n_units: int = 6_000, days: int = 30) -> str:
 
 
 def table_3() -> str:
-    """Finding 4: what the Form's rounding costs before any estimation."""
+    """Paper §6.1: what the Form's rounding costs before any estimation."""
     lines = [
         "Table 3 -- Disclosure precision consumes the error budget",
         "",
