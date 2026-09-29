@@ -2,7 +2,7 @@
 
 Code and data for the preprint:
 
-> Vilanakis, N. D. (2026). *What does "GPU utilization" mean? Testing the 30% accuracy margin for training-compute estimates under the EU AI Act.* Preprint. Zenodo. https://doi.org/PREPRINT-DOI
+> Vilanakis, N. D. (2026). *What does "GPU utilization" mean? Testing the 30% accuracy margin for training-compute estimates under the EU AI Act.* Preprint. Zenodo. 10.5281/zenodo.22881088
 
 Under Article 51(2) of the EU AI Act, a general-purpose AI model trained with more than 10²⁵ FLOP is presumed to carry systemic risk. The Commission's Guidelines (18 July 2025, Annex A.2) let providers estimate training compute with a hardware-based method, `C = N × L × H × U`, or an architecture-based method, `C ≈ 6 × P × D`, and accept any estimate that is accurate within 30%. This repository measures how much the undefined terms, "GPU utilisation" `U` and peak performance `H`, change the result.
 
