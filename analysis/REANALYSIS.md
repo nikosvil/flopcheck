@@ -1,7 +1,6 @@
 # Re-analysis: what "GPU utilisation" means on the same training runs
 
-**10 September 2026.** An independent re-analysis of a public dataset through Annex A.2.1 of the Commission's GPAI Guidelines. It replaces the week-3 GPU rental in the roadmap.
-
+**10 September 2026.** An independent re-analysis of a public dataset through Annex A.2.1 of the Commission's GPAI Guidelines.
 **Reproduce:** `python analysis/reanalysis_dos_group.py`. It writes figures (PNG and PDF), a CSV of the data behind each figure, and `summary.json` to `analysis/out/`.
 
 ---
