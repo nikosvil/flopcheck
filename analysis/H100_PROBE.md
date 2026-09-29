@@ -85,7 +85,7 @@ TinyLlama's reported 56% MFU was measured on an A100. The same architecture meas
 - **Energy per model FLOP varies 1.28× (±12%) across configurations on identical hardware.** Checkpointing alone raises it by 23%, because energy follows executed FLOPs, not model FLOPs.
 - **The linear relationship between MFU and power** (Enskat & Wiesner) **doesn't hold under a power cap**: power stayed flat while MFU moved from 32% to 42%.
 
-**What this means for Finding 5.** The Form's energy figure is still the national regulator's most precise quantitative handle, but even on known hardware it constrains compute only to about ±12%. It also inherits the recomputation bias from H2 and the energy-boundary question (GPU, node or facility).
+**What this means for the energy figure (§6.2 of the paper).** The Form's energy figure is still the national regulator's most precise quantitative handle, but even on known hardware it constrains compute only to about ±12%. It also inherits the recomputation bias from H2 and the energy-boundary question (GPU, node or facility).
 
 ### H7. The peak figure for "an H100" isn't unique, even in NVIDIA's own documents
 
@@ -109,7 +109,7 @@ The more a provider's documents understate which card they used, the larger the 
 
 ---
 
-## Caveats: state these in the paper
+## Caveats
 
 1. **One GPU and a 1.1B-parameter model.** No multi-node communication, no pipeline or tensor parallelism, no MoE. Those add inefficiencies that widen, not narrow, the gap between hardware readings and MFU.
 2. **An H100 PCIe under a 350 W power cap**, not an SXM at 700 W. MFU on an SXM would be higher; the counter would still read 100%.
@@ -117,13 +117,13 @@ The more a provider's documents understate which card they used, the larger the 
 4. **Random tokens and a 45 s warm-up plus 120 s measurement.** That's adequate for steady-state throughput, but it doesn't cover checkpoint writes, failures or restarts.
 5. **The argument this supports is a lower bound on a regulator's uncertainty**, not the true compute of any frontier model.
 
-## What this adds to the paper
+## Where this appears in the paper
 
-- **Finding 1** now rests on a controlled H100 measurement, not only on public 11-token data.
-- **Finding 6** (executed vs required FLOPs) is **directly measured**: +27–34% under checkpointing.
-- **Finding 2** gains a clean example: one GPU name, two variants, and four published peaks (756.45 / 800 / 989.4 / 1,000).
-- **Finding 5** is refined: under power caps, energy constrains compute only to about ±12%, and it follows executed FLOPs.
-- **The Article 53(5) schema is confirmed**: the checkpointing policy, the exact accelerator variant (PCIe or SXM) and the power limit all change the answer, and none of them is in the Form.
+- **§4.1 ("GPU utilisation" is not defined)** rests on this controlled H100 measurement, not only on the public 11-token data.
+- **§4.3 (hardware counters include excluded operations)**: executed vs required FLOPs is measured directly, +27–34% under checkpointing.
+- **§4.2 ("peak theoretical performance" is not defined)**: one GPU name, two variants, and four published peaks (756.45 / 800 / 989.4 / 1,000).
+- **§6.2 (the energy figure)**: under power caps, energy constrains compute only to about ±12%, and it follows executed FLOPs.
+- **§8 (the Article 53(5) proposal)**: the checkpointing policy, the exact accelerator variant (PCIe or SXM) and the power limit all change the answer, and none of them is in the Form.
 
 ## Files
 

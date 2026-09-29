@@ -83,22 +83,22 @@ For fp32, the repository normalises by: the TF32 tensor peak on A100, the FP16 t
 
 Peaks verified against the AMD MI210 brochure and the NVIDIA Quadro RTX 5000 datasheet. I haven't tried to diagnose the cause; those rows are simply excluded.
 
-**This is Finding 2 happening in practice.** Careful researchers, who wrote down which peak they used, still produced utilisation figures above 100% of what the hardware can do, because "peak theoretical performance" has no agreed basis for a given number format. The Annex has exactly the same gap.
+**This is the peak-performance gap (§4.2 of the paper) happening in practice.** Careful researchers, who wrote down which peak they used, still produced utilisation figures above 100% of what the hardware can do, because "peak theoretical performance" has no agreed basis for a given number format. The Annex has exactly the same gap.
 
 ---
 
-## Caveats: state these in the paper
+## Caveats
 
 1. **Every run uses an 11-token input sequence.** `sequence_length_mean` is 11 at both "context window" settings, even though the paper describes padding to 512 or 2,048 tokens. Steps are tiny: at most 1,408 tokens per step. Production pre-training runs at higher MFU.
 2. **Single GPU, models of 3.1B parameters or fewer, no H100, no FP8, no multi-node.**
 3. **So these ratios show that the two quantities differ and diverge systematically. They don't measure the size of the gap in a frontier run.** Take a healthy production MFU of 45% against a counter reading of 95%: the ratio is still **2.1×**, a +110% error against a 30% margin. The OFU paper's production fleet averaged about 25% MFU, which would put the ratio nearer 4×.
-4. The argument the paper needs is a **lower bound on a regulator's uncertainty**, and this data supports it: one ambiguous word, measured on real hardware, moves the result by at least 2× even under generous assumptions.
+4. What this data supports is a **lower bound on a regulator's uncertainty**: one ambiguous word, measured on real hardware, moves the result by at least 2× even under generous assumptions.
 
-**Optional confirmation (about €25):** one H100 run with realistic sequence lengths (2k–8k), recording the counter, MFU and DCGM tensor activity together. It would add the H100 and FP8, the hardware the Commission's Model H uses. It's no longer on the critical path.
+The H100 run in `H100_PROBE.md` repeats the comparison at realistic sequence lengths (2k–8k).
 
-## Crediting the source
+## Credit
 
-Cite Enskat & Wiesner (2026) prominently: their measurement makes this section possible. R3 and R4 are observations about *their repository's secondary columns*. Their paper's main analysis uses the profiler-based MFU, which checks out. If you want, it would be good form to tell the authors about the formula and fp32-peak issues before the preprint goes out, as a courtesy. That's your call.
+The measurements are Enskat & Wiesner's (2026), and this re-analysis depends on them. R3 and R4 concern *secondary columns in their repository*. Their paper's main analysis uses the profiler-based MFU, which checks out.
 
 ## Files
 
