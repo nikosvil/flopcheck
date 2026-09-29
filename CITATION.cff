@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the preprint below."
+title: "What does \"GPU utilization\" mean? Code and data"
+type: software
+authors:
+  - family-names: Vilanakis
+    given-names: N. D.
+    affiliation: "Applied Mathematics and Computers Lab, School of Production Engineering and Management, Technical University of Crete"
+version: 1.0.0
+date-released: 2026-09-29
+license: MIT
+repository-code: "https://github.com/nikosvil/flopcheck"
+keywords:
+  - EU AI Act
+  - training compute
+  - GPU utilization
+  - model FLOP utilization
+  - AI governance
+preferred-citation:
+  type: article
+  title: "What does \"GPU utilization\" mean? Testing the 30% accuracy margin for training-compute estimates under the EU AI Act"
+  authors:
+    - family-names: Vilanakis
+      given-names: N. D.
+      affiliation: "Applied Mathematics and Computers Lab, School of Production Engineering and Management, Technical University of Crete"
+  year: 2026
+  month: 9
+  status: preprint
+  publisher:
+    name: Zenodo
+  doi: "10.5281/zenodo.22881088"
