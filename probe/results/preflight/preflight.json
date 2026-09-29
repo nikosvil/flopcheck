@@ -1,0 +1,96 @@
+{
+  "env": {
+    "python": "3.12.3",
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "utc": "2026-09-16T19:04:24.596602+00:00",
+    "gpu_name": "NVIDIA H100 PCIe",
+    "driver": "580.126.20",
+    "max_sm_clock_mhz": 1755,
+    "power_limit_w": 350.0,
+    "gpu_count": 1,
+    "peak_label": "H100 PCIe",
+    "peak_flops": 756000000000000.0,
+    "tc_max_mhz": null,
+    "dcgm_ok": true,
+    "dcgm_msg": "4 samples",
+    "nvidia_smi_q": "\n==============NVSMI LOG==============\n\nTimestamp                                              : Wed Sep 16 19:04:25 2026\nDriver Version                                         : 580.126.20\nCUDA Version                                           : 13.0\n\nAttached GPUs                                          : 1\nGPU 00000000:01:00.0\n    GPU Power Readings\n        Average Power Draw                             : 82.55 W\n        Instantaneous Power Draw                       : 82.73 W\n        Current Power Limit                            : 350.00 W\n        Requested Power Limit                          : 350.00 W\n        Default Power Limit                            : 310.00 W\n        Min Power Limit                                : 200.00 W\n        Max Power Limit                                : 350.00 W\n    Power Samples\n        Duration                                       : 2.36 sec\n        Number of Samples                              : 119\n        Max                                            : 83.04 W\n        Min                                            : 81.91 W\n        Avg                                            : 82.49 W\n    GPU Memory Power Readings \n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n    Module Power Readings\n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n        Current Power Limit                            : N/A\n        Requested Power Limit                          : N/A\n        Default Power Limit                            : N/A\n        Min Power Limit                                : N/A\n        Max Power Limit                                : N/A\n    Clocks\n        Graphics                                       : 1755 MHz\n        SM                                             : 1755 MHz\n        Memory                                         : 1593 MHz\n        Video                                          : 1455 MHz\n    Applications Clocks\n        Graphics                                       : 1755 MHz\n        Memory                                         : 1593 MHz\n    Default Applications Clocks\n        Graphics                                       : 1755 MHz\n        Memory                                         : 1593 MHz\n    Deferred Clocks\n        Memory                                         : N/A\n    Max Clocks\n        Graphics                                       : 1755 MHz\n        SM                                             : 1755 MHz\n        Memory                                         : 1593 MHz\n        Video                                          : 1470 MHz\n    Max Customer Boost Clocks\n        Graphics                                       : 1755 MHz\n    SM Clock Samples\n        Duration                                       : Not Found\n        Number of Samples                              : Not Found\n        Max                                            : Not Found\n        Min                                            : Not Found\n        Avg                                            : Not Found\n    Memory Clock Samples\n        Duration                                       : Not Found\n        Number of Samples                              : Not Found\n        Max                                            : Not Found\n        Min                                            : Not Found\n        Avg                                            : Not Found\n    Clock Policy\n        Auto Boost                                     : N/A\n        Auto Boost Default                             : N/A\n\n"
+  },
+  "result": {
+    "config": {
+      "seq": 2048,
+      "batch": 2,
+      "ckpt": false
+    },
+    "compiled": false,
+    "gqa_native": true,
+    "steps": 94,
+    "elapsed_s": 15.170596556999953,
+    "tokens_per_s": 25379.621595852394,
+    "model_flops_per_token": 7313817600.0,
+    "model_flops_per_token_causal_half": 6760169472.0,
+    "executed_flops_per_token": 7498366976.0,
+    "peak_flops": 756000000000000.0,
+    "mfu": 0.24553164432418692,
+    "mfu_causal_half": 0.22694516286136676,
+    "hfu": 0.251727138145127,
+    "nvml_util_pct": {
+      "n": 152,
+      "mean": 100.0,
+      "median": 100.0,
+      "p10": 100.0,
+      "p90": 100.0
+    },
+    "nvml_power_w": {
+      "n": 152,
+      "mean": 343.8018092105263,
+      "median": 343.826,
+      "p10": 342.706,
+      "p90": 345.031
+    },
+    "nvml_sm_clock_mhz": {
+      "n": 152,
+      "mean": 1548.2565789473683,
+      "median": 1530.0,
+      "p10": 1500.0,
+      "p90": 1635.0
+    },
+    "energy_j": 5223.054,
+    "joules_per_model_flop": 1.854780789535451e-12,
+    "dcgm_sm_active": {
+      "n": 149,
+      "mean": 0.8782953020134229,
+      "median": 0.877,
+      "p10": 0.873,
+      "p90": 0.886
+    },
+    "dcgm_tensor_active": {
+      "n": 149,
+      "mean": 0.28304026845637587,
+      "median": 0.265,
+      "p10": 0.253,
+      "p90": 0.326
+    },
+    "dcgm_sm_clock_mhz": {
+      "n": 149,
+      "mean": 1546.6107382550335,
+      "median": 1530.0,
+      "p10": 1500.0,
+      "p90": 1635.0
+    },
+    "dcgm_power_w": {
+      "n": 149,
+      "mean": 343.80140268456375,
+      "median": 343.825,
+      "p10": 342.609,
+      "p90": 345.033
+    },
+    "dcgm_gpu_util_pct": {
+      "n": 149,
+      "mean": 100.0,
+      "median": 100.0,
+      "p10": 100.0,
+      "p90": 100.0
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# PyTorch with CUDA is usually preinstalled on GPU images; preflight checks the version.
+# If it is missing or older than 2.3:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+nvidia-ml-py>=12
+numpy

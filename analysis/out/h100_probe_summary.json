@@ -1,0 +1,78 @@
+{
+  "run": "20260916T190612Z",
+  "gpu": "NVIDIA H100 PCIe",
+  "driver": "580.126.20",
+  "torch": "2.6.0+cu124",
+  "power_limit_w": 350.0,
+  "max_sm_clock_mhz": 1755,
+  "counter_over_mfu_range": [
+    2.41,
+    3.1
+  ],
+  "mfu_range_pct": [
+    32.2,
+    41.5
+  ],
+  "counter_min_pct": 99.8,
+  "checkpointing_executed_over_model_range": [
+    1.271,
+    1.343
+  ],
+  "attention_convention_full_over_half": {
+    "2048": 1.082,
+    "8192": 1.263
+  },
+  "ofu_range_pct": [
+    35.0,
+    44.5
+  ],
+  "ofu_over_hfu_range": [
+    0.979,
+    1.062
+  ],
+  "power_w_range": [
+    343.1,
+    346.7
+  ],
+  "clock_over_max_range": [
+    0.65,
+    0.76
+  ],
+  "j_per_model_flop_range": [
+    1.098e-12,
+    1.407e-12
+  ],
+  "j_per_model_flop_max_over_min": 1.282,
+  "tinyllama_a100_mfu_over_measured_baseline": 1.36,
+  "peak_used_tflops": 756.44928,
+  "peak_sensitivity": {
+    "756.45 (PCIe, clock-derived)": {
+      "baseline_mfu_pct": 41.1,
+      "counter_over_mfu_range": [
+        2.41,
+        3.1
+      ]
+    },
+    "800 (PCIe, whitepaper, rounded)": {
+      "baseline_mfu_pct": 38.8,
+      "counter_over_mfu_range": [
+        2.55,
+        3.28
+      ]
+    },
+    "989.4 (SXM, datasheet)": {
+      "baseline_mfu_pct": 31.4,
+      "counter_over_mfu_range": [
+        3.15,
+        4.06
+      ]
+    },
+    "1000 (SXM5, whitepaper, rounded)": {
+      "baseline_mfu_pct": 31.1,
+      "counter_over_mfu_range": [
+        3.19,
+        4.1
+      ]
+    }
+  }
+}
