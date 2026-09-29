@@ -532,7 +532,7 @@ def cmd_preflight(args) -> int:
     print("== preflight ==")
     problems = []
     if not torch.cuda.is_available():
-        print("  CUDA not available to PyTorch.  -> STOP. See README, step 6.")
+        print("  CUDA not available to PyTorch.  -> STOP. See README, step 7.")
         return 1
     env, nvml, h = gpu_env(args)
     v = tuple(int(p) for p in torch.__version__.split("+")[0].split(".")[:2])
@@ -545,7 +545,7 @@ def cmd_preflight(args) -> int:
     if env["peak_flops"] is None:
         problems.append("GPU not recognised as H100 SXM/PCIe: MFU needs --peak-tflops from the datasheet")
     if v < (2, 3):
-        problems.append("PyTorch older than 2.3: upgrade (README step 6)")
+        problems.append("PyTorch older than 2.3: upgrade (README step 7)")
     if not nvml:
         problems.append("NVML bindings missing: pip install nvidia-ml-py")
     if not torch.cuda.is_bf16_supported():
@@ -611,7 +611,7 @@ def cmd_run(args) -> int:
                     break
     tgz = pack(outdir)
     print(f"\nDone. Results packed into:\n  {tgz}")
-    print("Copy it back (README step 10), then TERMINATE the instance (step 11).")
+    print("Copy it back (README step 11), then DELETE the instance (step 12).")
     return 0
 
 
